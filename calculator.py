@@ -1,5 +1,3 @@
-"""A small command-line calculator used for unit testing examples."""
-
 from __future__ import annotations
 
 import argparse
@@ -45,14 +43,14 @@ def calculate(operation: str, left: float, right: float) -> float:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Basic calculator")
+    parser = argparse.ArgumentParser(description="Calculadora simples")
     parser.add_argument(
         "operation",
         choices=["add", "subtract", "multiply", "divide", "power"],
-        help="operation to execute",
+        help="operacao a ser executada",
     )
-    parser.add_argument("left", type=float, help="left operand")
-    parser.add_argument("right", type=float, help="right operand")
+    parser.add_argument("left", type=float, help="primeiro numero")
+    parser.add_argument("right", type=float, help="segundo numero")
     return parser
 
 
